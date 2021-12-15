@@ -28,7 +28,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
 <body>
     <div class="wrapper">
         <h2>Registration</h2>
-        <h4 id="error"></h4>
+        <h4 id="error"><?php if(isset($output)){ echo $output; } ?></h4>
         <form method="POST" action="signup.php">
             <div class="input-box">
                 <input name="name" id="name" type="text" placeholder="Enter your name" required>
